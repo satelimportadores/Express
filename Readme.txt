@@ -32,5 +32,11 @@ npm install -g express
 3.Yeoman (depresiado)
 npm install -g yo
 
+//Iniciar el proyecto de node a travez de un js
+npm init --yes
+    //Para evitar problemas no poner al nombre del proyecto como alguna dependencia.
+
+//ejecutar el servidor
+node index.js
 
 
