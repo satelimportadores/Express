@@ -39,4 +39,10 @@ npm init --yes
 //ejecutar el servidor
 node index.js
 
+//Rutas - Routing:
+get: Peticion
+post: Actualizar o Agrear
+put: Actualizar
+delete: Borrar
+
 
