@@ -1,5 +1,22 @@
 const express = require('express');
+const morgan = require('morgan');
+
+
 const app = express();
+
+//Middlewares
+/*app.use( (req,res,next) => {
+    console.log('Request URL: ', req.url );
+    next();
+});
+    //next() se utiliza para que no se queda la funcion bloqueada.
+app.use( (req,res,next) => {
+    console.log('A pasado por esta funcion' );
+    next();
+});*/
+
+    //utilizar morgan
+    app.use(morgan("combined"));
 
 //Rutas
     app.get('/', (req,res)=>{

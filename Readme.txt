@@ -45,4 +45,10 @@ post: Actualizar o Agrear
 put: Actualizar
 delete: Borrar
 
+//MiddleWares
+    Se buscan en google -> npm
+    https://www.npmjs.com/search?q=express-middleware
+    //Por ejemplo morgan para log de URLs
+    npm i morgan
+
 
