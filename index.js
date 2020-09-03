@@ -4,6 +4,11 @@ const morgan = require('morgan');
 
 const app = express();
 
+//Settings
+    //variables:
+    app.set('appName', 'Mi primer server');
+
+
 //Middlewares
 /*app.use( (req,res,next) => {
     console.log('Request URL: ', req.url );
@@ -34,4 +39,5 @@ app.use( (req,res,next) => {
 
 app.listen(3000, () =>{
     console.log("Servidor Ready");
+    console.log("Nombre de la APP", app.get('appName'));
 });
