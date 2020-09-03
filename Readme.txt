@@ -51,4 +51,20 @@ delete: Borrar
     //Por ejemplo morgan para log de URLs
     npm i morgan
 
+//Plantillas - potenciar el html : bucles , etc.
+    Hay partes de una pagina que se repiten:
+    motores de plantillas:
+    EJS*
+    ERB,
+    Jinja,
+    Razor,
+    Jade,
+    Pug
+
+    npm i ejs
+
+    
+
+
+
 

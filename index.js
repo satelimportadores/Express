@@ -7,7 +7,9 @@ const app = express();
 //Settings
     //variables:
     app.set('appName', 'Mi primer server');
-
+    console.log(__dirname);//Ver la ubicacion del index
+    app.set('views',__dirname+'/views');
+    app.set('view engine','ejs')
 
 //Middlewares
 /*app.use( (req,res,next) => {
@@ -24,13 +26,20 @@ app.use( (req,res,next) => {
     app.use(morgan("combined"));
 
 //Rutas
-    app.get('/', (req,res)=>{
-        res.end('Hello world!');
-    });
 
-    app.get('/login', (req,res)=>{
+   /* app.get('/', (req,res)=>{
+        res.end('Hello world!');
+    });*/
+        app.get('/', (req,res)=>{
+            res.render('index.ejs');
+        });
+
+    /*app.get('/login', (req,res)=>{
         res.end('Aquí va el login');
-    });
+    });*/
+        app.get('/login', (req,res)=>{
+            res.render('login.ejs');
+        });
 
     //Ruta cuando no hay archivo
     app.get('*', (req,res)=>{
