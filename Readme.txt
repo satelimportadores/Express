@@ -63,7 +63,25 @@ delete: Borrar
 
     npm i ejs
 
+//SubAplicaciones    
+    Varias APIs
+    modulo Router
+
+//Frameworks recomendados similares:
+    Hapi.js: muy similar a express - mayor competidor
+    Meteor : Full Stack
+    Kraken: express evolucion paypal
+    Sails: modulo MVC
+    Connect: hardfork express
+
+//Modulos recomentdados para express:
+    *Nodemon: "Tratar de evitar reiniciar el modulo a cada momento."
+    Passport: registrar y login
+    Forever: Ejecutar el servidor cada vez que se caiga.
+
     
+
+
 
 
 

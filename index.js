@@ -1,6 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
 
+const routesApi = require('./api');
+
 
 const app = express();
 
@@ -25,26 +27,25 @@ app.use( (req,res,next) => {
     //utilizar morgan
     app.use(morgan("combined"));
 
-//Rutas
+//Rutas - ahora tratado desde rutas.js
 
    /* app.get('/', (req,res)=>{
         res.end('Hello world!');
     });*/
-        app.get('/', (req,res)=>{
-            res.render('index.ejs');
-        });
 
     /*app.get('/login', (req,res)=>{
         res.end('Aquí va el login');
     });*/
-        app.get('/login', (req,res)=>{
-            res.render('login.ejs');
-        });
+    const routes = require('./rutas');
+    app.use(routes);
+    app.use(routesApi);
 
     //Ruta cuando no hay archivo
-    app.get('*', (req,res)=>{
-        res.end('Archivo no encontrado');
-    });
+        app.get('*', (req,res)=>{
+            res.end('Archivo no encontrado');
+        });
+
+
 
 app.listen(3000, () =>{
     console.log("Servidor Ready");
